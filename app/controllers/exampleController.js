@@ -123,7 +123,7 @@ exports.getData = (req, res) => {
         FROM attacks
         GROUP BY source_country, attack_type
       `;
-      const result = await pool.query(query);
+      const result =  pool.query(query);
   
       const response = {
         success: true,
