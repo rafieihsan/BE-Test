@@ -1,10 +1,11 @@
 const config = require("../config/db");
 
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize(config.DB, config.USER, config.PASSWORD, {
+const sequelize = new Sequelize(config.DB, config.USER, config.PASSWORD,  {
   host: config.HOST,
   dialect: config.dialect,
-  operatorsAliases: false,
+  // operatorsAliases: false,
+  port: 5432,
 
   pool: {
     max: config.pool.max,
@@ -20,7 +21,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 // define model example
-// db.user = require("../models/User")(sequelize, Sequelize);
+// db.user = require("../models/Example")(sequelize, Sequelize);
 
 // relation example
 // relation between role and user

@@ -13,13 +13,13 @@ module.exports = (app) => {
   const router = require("express").Router();
 
   router.get(
-    "/",
+    "/refactorme1",
     [exampleMiddleware.exampleMiddleware],
-    exampleController.exampleFunction
+    exampleController.refactoreMe1
   );
 
   router.get(
-    "/",
+    "/refactorme2",
     [exampleMiddleware.exampleMiddleware],
     exampleController.exampleFunction
   );
